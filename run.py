@@ -97,12 +97,12 @@ while True:
         prob = torch.nn.functional.softmax(output, dim=1)[0][pred] * 100
         
         # 4. 결과 출력
-        print(f"🤖 모델 인식: 입력하신 '{user_input}'을(를) '{recognized_word}'(으)로 인식했습니다.")
-        print(f"🔍 탐지 결과: Class {pred} (확신도: {prob:.2f}%)")
+        print(f"모델 인식: 입력하신 '{user_input}'을(를) '{recognized_word}'(으)로 인식했습니다.")
+        print(f"")
         
         if pred == 1: # 보통 1을 공격/위험으로 설정하는 경우
-            print("⚠️ 경고: 보안 위협 패턴이 감지되었습니다!")
+            print("")
         else:
-            print("✅ 정상적인 입력 패턴입니다.")
+            print("")
 
 print("="*50)
